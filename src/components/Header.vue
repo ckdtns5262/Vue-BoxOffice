@@ -1,7 +1,7 @@
 <template>
   <nav class="nav-header">
     <img src='../assets/images/logo.png' alt="LOGO"/>
-    <h2>영화</h2>
+    <h2><router-link to="/">영화</router-link></h2>
     <a href="https://news.daum.net/">뉴스</a>
     <a href="https://entertain.daum.net/">연예</a>
     <a href="https://sports.daum.net/">스포츠</a>
@@ -47,5 +47,6 @@ img {
 }
 a {
 text-decoration-line: none;
+ color : black;
 }
 </style>

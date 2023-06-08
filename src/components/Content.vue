@@ -1,11 +1,12 @@
 <template>
+  <Header/>
   <div class="content">
     <section class="section">
         <nav class="nav-list">
-            <h2>홈</h2>
-            <h2 @click="step = 1"> 랭킹</h2>
-            <h2>상영/예정작</h2>
-            <h2>콘텐츠</h2>
+            <router-link to="/">홈</router-link>
+            <router-link to="/moviechart">랭킹</router-link>
+             <router-link to="/">상영/예정작</router-link>
+             <router-link to="/">콘텐츠</router-link>
         </nav>
     </section>
     <section>
@@ -18,13 +19,16 @@
     </div>
     </section>
   </div>
-    <MovieChart :step="step"/>
+   <router-view>
+
+   </router-view>
 
 
 </template>
 
 <script>
-import MovieChart from './Movie.vue'
+import MovieChart from './MovieChart.vue'
+import Header from './Header.vue'
 
 
 
@@ -35,7 +39,7 @@ export default {
 
     name : "Content",
     components : {
-        MovieChart
+        MovieChart, Header
         },
     
     data(){
@@ -69,11 +73,12 @@ export default {
 
     
 }
-.nav-list h2 {
+.nav-list a  {
     color : gray;
     cursor: pointer;
+    font-size: 25px;
 }
-.nav-list h2:hover{
+.nav-list a:hover{
     color : #eee;
 }
 .content-text h1 {
@@ -89,5 +94,6 @@ export default {
     border-radius: 10px white;
     cursor: pointer;
 }
+
 </style>
 

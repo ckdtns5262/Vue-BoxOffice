@@ -1,9 +1,19 @@
 import { createWebHistory, createRouter } from "vue-router";
-import MovieList from '../src/components/MovieList'
+import MovieInfo from './components/MovieInfo'
+import MovieChart from './components/MovieChart'
+import Content from './components/Content'
 const routes = [
   {
-    path: "/movielist",
-    component: MovieList
+    path : '/',
+    component : Content
+  },
+  {
+    path: "/movielist/:id",
+    component: MovieInfo,
+  },
+  {
+    path : "/moviechart",
+    component : MovieChart
   }
 ];
 

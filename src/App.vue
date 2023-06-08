@@ -1,12 +1,12 @@
 <template>
-  <Header/>
-  <Content/>
 
+  <router-view>
+  </router-view>
 </template>
 
 <script>
 import Content from './components/Content.vue'
-import Header from './components/Header.vue'
+import MovieChart from './components/MovieChart.vue'
 
 
 
@@ -14,8 +14,8 @@ import Header from './components/Header.vue'
 export default {
   name: 'App',
   components: {
-    Header,
-    Content,
+    Content,MovieChart
+
 
   }
 }
