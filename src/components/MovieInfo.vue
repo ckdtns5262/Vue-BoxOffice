@@ -14,7 +14,9 @@
       <li><span>감독 : </span>{{directors}}</li>
       <li><span>장르 : </span>{{genres}}</li>
         <div class="movie-like">
-        <span>👍 좋아요 갯수 : {{$store.state.like[i]}}</span>
+        <span>👍 좋아요 갯수 : {{$store.state.like[$store.state.누른거]}}
+
+        </span>
       </div>
       </ul>
     
@@ -34,7 +36,7 @@ export default {
       genres : '',
       company : '',
       find : [],
-      좋아요누른거 : ''
+      click : 0
     
     }
   },
@@ -87,6 +89,10 @@ export default {
   },
   mounted(){
     this.getMovie()
+
+  },
+  props : {
+    i : Number
   }
 }
 </script>
